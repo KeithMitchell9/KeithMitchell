@@ -34,7 +34,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: flex; /* Use flexbox for layout */
             justify-content: space-between; /* Space out children evenly */
-            align-items: flex-start; /* Align items at the start */
+            align-items: stretch; /* Make all items the same height */
         }
         .toc {
             width: 30%; /* Set width for Table of Contents */
@@ -42,6 +42,7 @@
             background: #e7e7e7;
             border: 1px solid #ccc;
             box-sizing: border-box; /* Include padding in width */
+            height: 200px; /* Fixed height for uniformity */
         }
         .toc a {
             display: inline; /* Make links inline */
@@ -53,10 +54,15 @@
         .image-container {
             width: 40%; /* Set width for image container */
             text-align: center; /* Center image horizontally */
+            height: 200px; /* Fixed height for uniformity */
+            display: flex; /* Flexbox for centering image */
+            align-items: center; /* Center image vertically */
+            justify-content: center; /* Center image horizontally */
+            background: #e7e7e7; /* Optional background for alignment */
         }
         .image-container img {
             max-width: 100%; /* Ensure the image is responsive */
-            height: auto;
+            max-height: 100%; /* Maintain aspect ratio */
         }
         .contact-info {
             width: 25%; /* Set width for Contact Info */
@@ -64,6 +70,7 @@
             background: #e7e7e7; /* Light grey background */
             border: 1px solid #ccc;
             box-sizing: border-box; /* Include padding in width */
+            height: 200px; /* Fixed height for uniformity */
         }
         footer {
             text-align: center;
