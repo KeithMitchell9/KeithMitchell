@@ -32,15 +32,16 @@
             padding: 20px;
             background: #ffffff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out children evenly */
+            align-items: flex-start; /* Align items at the start */
         }
         .toc {
             width: 30%; /* Set width for Table of Contents */
-            margin-right: 20px;
             padding: 10px;
             background: #e7e7e7;
             border: 1px solid #ccc;
-            display: inline-block; /* Make it inline-block for better layout */
-            vertical-align: top; /* Align it to the top */
+            box-sizing: border-box; /* Include padding in width */
         }
         .toc a {
             display: inline; /* Make links inline */
@@ -50,9 +51,7 @@
             padding: 0; /* No padding for links */
         }
         .image-container {
-            width: 30%; /* Set width for image container */
-            display: inline-block; /* Allow it to sit next to the TOC */
-            vertical-align: top; /* Align it to the top */
+            width: 40%; /* Set width for image container */
             text-align: center; /* Center image horizontally */
         }
         .image-container img {
@@ -60,13 +59,11 @@
             height: auto;
         }
         .contact-info {
-            margin-top: 20px;
+            width: 25%; /* Set width for Contact Info */
             padding: 10px;
             background: #e7e7e7; /* Light grey background */
             border: 1px solid #ccc;
-            display: block; /* Display as block for full width */
-            width: 100%; /* Full width of the container */
-            text-align: left; /* Align text to the left */
+            box-sizing: border-box; /* Include padding in width */
         }
         footer {
             text-align: center;
@@ -89,8 +86,15 @@
 <body>
 
 <header>
-    <h1>Keith J. Mitchell's Webpage</h1>
+    <h1>Welcome to Keith J. Mitchell's Webpage</h1>
 </header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <div class="container">
     <div class="toc">
@@ -101,15 +105,15 @@
         <a href="#fun-facts">Fun Facts</a>
     </div>
 
+    <div class="image-container">
+        <img src="https://yourusername.github.io/your-repo-name/images/my-picture.jpg" alt="A descriptive alt text for my picture">
+    </div>
+
     <div class="contact-info">
         <h2>Contact Info</h2>
         <p>Email: keith@example.com</p>
         <p>Phone: (123) 456-7890</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/keithjmitchell" target="_blank">linkedin.com/in/keithjmitchell</a></p>
-    </div>
-
-    <div class="image-container">
-        <img src="https://yourusername.github.io/your-repo-name/images/my-picture.jpg" alt="A descriptive alt text for my picture">
     </div>
 </div>
 
